@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "title": "Makeup Artist",
+      "description": "Servicio profesional de maquillaje para cualquier ocasión.",
+      "price": 50,
+      "category": "makeup",
+      "img": "makeup1.png",
+      "location": "25 millas de distancia",
+      "datesAvailable": "Feb 21-28",
+      "stars": 4
+    },
+    {
+      "id": 2,
+      "title": "Nail Technician",
+      "description": "Servicios creativos y estilosos de uñas.",
+      "price": 40,
+      "category": "nails",
+      "img": "nail1.png",
+      "location": "A 5 km de tu ubicación",
+      "datesAvailable": "Feb 25-Mar 5",
+      "stars": 5
+    },
+    {
+      "id": 3,
+      "title": "Makeup & Nails Combo",
+      "description": "Paquete especial que incluye maquillaje y servicios de uñas.",
+      "price": 80,
+      "category": "makeup",
+      "img": "makeup2.png",
+      "location": "A domicilio",
+      "datesAvailable": "Mar 1-15",
+      "stars": 4.5
+    },
+    {
+      "id": 4,
+      "title": "Maquillaje para Bodas",
+      "description": "Servicio exclusivo de maquillaje para eventos de bodas.",
+      "price": 120,
+      "category": "makeup",
+      "img": "weeding.png",
+      "location": "Cerca de iglesias y salones de bodas",
+      "datesAvailable": "Disponible todo el año",
+      "stars": 5
+    },
+    {
+      "id": 5,
+      "title": "Diseños de Uñas Artísticas",
+      "description": "Uñas artísticas con diseños únicos y personalizados.",
+      "price": 45,
+      "category": "nails",
+      "img": "nail 2.png",
+      "location": "Centro de la ciudad",
+      "datesAvailable": "Feb 28-Mar 10",
+      "stars": 4
+    }
+  ]
+  

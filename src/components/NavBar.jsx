@@ -1,43 +1,39 @@
-import React from 'react'
-import CarWidget from './carwidget'
-import { Flex, Spacer, Box, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
+import React from 'react';
+import CarWidget from './carwidget';
+import { Link } from 'react-router-dom';
+import { Flex, Box, Menu, MenuButton, MenuList, MenuItem, Spacer } from '@chakra-ui/react';
 
 const NavBar = () => {
     return (
-    <div>
-
         <Flex bg="black" p="4" color="white">
             <Box p='4'>
-                Paramo Cosmetics
+                Allura
             </Box>
 
-            <Menu bg>
+            <Menu>
                 <MenuButton as="button" color="white">
                     Categorias
                 </MenuButton>
-    <MenuList bg="black">
-                <MenuItem color="black">Best Sellers</MenuItem>
-                <MenuItem color="violet">Face</MenuItem>
-                <MenuItem color="brown">Lips</MenuItem>
-                <MenuItem color="red">Eyes</MenuItem>
-    </MenuList>
-</Menu>
+                <MenuList bg="black">
+                    <MenuItem color="black">
+                        <Link to="/category/makeup">Inicio</Link>
+                    </MenuItem>
+                    <MenuItem color="black">
+                        <Link to="/category/makeup">Makeup</Link>
+                    </MenuItem>
+                    <MenuItem color="violet">
+                        <Link to="/category/nails">Nail</Link>
+                    </MenuItem>
+                </MenuList>
+            </Menu>
 
+<Spacer/>
 
-<Spacer />
-
-
-
-
-
-
-    <Box p='4'>
-    <CarWidget />
-    </Box>
-</Flex>
-
-    </div>
-  )
+            <Box p='4'>
+                <CarWidget />
+            </Box>
+        </Flex>
+    );
 }
 
-export default NavBar
+export default NavBar;
