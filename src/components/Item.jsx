@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom"
+
+
 export const Item = ({ product }) => {
-    return (
+  return (
       <div className="max-w-xs mx-auto bg-white p-4 rounded-md shadow-md">
         <img src={`../img/${product.img}`} alt={`Imagen de ${product.title}`} className="w-full h-40 object-cover mb-4 rounded-md" />
         <h2 className="text-lg font-semibold mb-2">{product.title}</h2>
@@ -15,18 +18,19 @@ export const Item = ({ product }) => {
           </div>
         </div>
         <button className="bg-cyan-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none">
+    <Link to={`/product/${product.id}`}>
           Agregar al Carrito
+    </Link>
         </button>
       </div>
-    );
-  };
-  
-  // Función para generar estrellas según el rating
-  const getStars = (rating) => {
-    const stars = [];
-    for (let i = 1; i <= 5; i++) {
-      stars.push(<i key={i} className={`fa${i <= rating ? 's' : 'r'} fa-star`} />);
-    }
-    return stars;
-  };
-  
+  );
+};
+
+// Función para generar estrellas según el rating
+const getStars = (rating) => {
+  const stars = [];
+  for (let i = 1; i <= 5; i++) {
+    stars.push(<i key={i} className={`fa${i <= rating ? 's' : 'r'} fa-star`} />);
+  }
+  return stars;
+};

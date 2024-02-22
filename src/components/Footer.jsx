@@ -3,21 +3,20 @@ import React from 'react';
 const Footer = () => {
   const styles = {
     footer: {
-      backgroundColor: '#000000',
-      color: '#ffffff',
+      backgroundColor: "#f192aa",
+      color: "#fff",
       padding: '40px 0',
       fontSize: '14px',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'flex-end',
-      minHeight: '100vh', // Añadido para ocupar el 100% del alto de la ventana
     },
     footerContainer: {
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: 'space-between',
       maxWidth: '1200px',
-      margin: '20px auto 0', // Añadido margin-top de 20px
+      margin: '0 auto ', 
     },
     footerSection: {
       flex: 1,
@@ -52,7 +51,7 @@ const Footer = () => {
       marginBottom: '10px',
     },
     newsletterButton: {
-      backgroundColor: '#BEA6A0',
+      backgroundColor: '#d53f8c',
       color: '#ffffff',
       border: 'none',
       borderRadius: '4px',
