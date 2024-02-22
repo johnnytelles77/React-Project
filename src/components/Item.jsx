@@ -26,7 +26,8 @@ export const Item = ({ product }) => {
   );
 };
 
-// Función para generar estrellas según el rating
+
+
 const getStars = (rating) => {
   const stars = [];
   for (let i = 1; i <= 5; i++) {

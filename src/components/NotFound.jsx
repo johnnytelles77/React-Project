@@ -9,8 +9,8 @@ export const NotFound = () => {
       align="center"
       justify="center"
       h="100vh"
-      bg="white" // Cambiado a blanco
-      color="#f192aa" // Texto en color rosa (puedes ajustarlo)
+      bg="white" 
+      color="#f192aa" 
     >
       <Text fontSize="7xl" fontWeight="bold" mb="6">
         ¡Oops!
@@ -24,11 +24,11 @@ export const NotFound = () => {
           placeholder="Buscar..."
           variant="filled"
           mr="2"
-          border="2px solid #8A4D76" // Borde púrpura (puedes ajustarlo)
-          fontSize="3xl" // Tamaño de fuente extra grande
-          fontWeight="bold" // Texto en negrita
+          border="2px solid #8A4D76" 
+          fontSize="3xl" 
+          fontWeight="bold" 
         />
-        <Button colorScheme="pink" fontSize="3xl" fontWeight="bold">Buscar</Button> {/* Cambiado a esquema de colores pink, 3xl y negrita */}
+        <Button colorScheme="pink" fontSize="3xl" fontWeight="bold">Buscar</Button> 
       </Flex>
       <Text fontSize="3xl" mt="8">
         O regresa a <Link to="/" style={{ color: '#8A4D76', textDecoration: 'underline', fontSize: '3xl', fontWeight: 'bold' }}>Inicio</Link>.
