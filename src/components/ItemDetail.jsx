@@ -1,9 +1,10 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { useCounter } from "../hooks/useCounter";
+import { useCarritoContext } from "../context/CartContext"
 
 export const ItemDetail = ({ item }) => {
+    const { addItem } = useCarritoContext()
     const { count, increment, decrement, reset } = useCounter(1, item.stock, 1);
 
     const handleAddToCart = () => {
@@ -44,25 +45,26 @@ export const ItemDetail = ({ item }) => {
                 <div className="container mx-auto mt-8">
                     <div className="flex items-center justify-center space-x-4">
                         <button
-                            className="bg-cyan-500 text-white px-4 py-2 rounded" // Ajusta este color según tu paleta
+                            className="bg-cyan-500 text-white px-4 py-2 rounded"
                             onClick={decrement}
                         >
                             -
                         </button>
                         <span className="text-xl font-bold">{count}</span>
                         <button
-                            className="bg-cyan-500 text-white px-4 py-2 rounded" 
+                            className="bg-cyan-500 text-white px-4 py-2 rounded"
+                            onClick={increment}
                         >
                             +
                         </button>
                         <button
-                            className="bg-cyan-500 text-white px-4 py-2 rounded" 
+                            className="bg-cyan-500 text-white px-4 py-2 rounded"
                             onClick={reset}
                         >
                             Reset
                         </button>
                         <button
-                            className="bg-blue-600 text-white px-4 py-2 rounded-md" 
+                            className="bg-blue-600 text-white px-4 py-2 rounded-md"
                             onClick={handleAddToCart}
                         >
                             Agregar al carrito
