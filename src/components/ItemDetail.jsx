@@ -8,6 +8,7 @@ export const ItemDetail = ({ item }) => {
   const { count, increment, decrement, reset } = useCounter(1, item.stock, 1)
 
   const handleAddToCart = () => {
+    addItem(item, count)
     console.log("Producto agregado al carrito")
     console.log("Current Count:", count)
   }
