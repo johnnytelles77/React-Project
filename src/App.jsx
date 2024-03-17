@@ -8,12 +8,14 @@ import { Checkout } from "./components/Checkout";
 import { ItemDetailsContainer } from "./components/ItemDetailsContainer";
 import { NotFound } from "./components/NotFound";
 import { CarritoProvider } from './context/CartContext.jsx'
+import { ToastContainer } from 'react-toastify'
 
 const App = () => {
   return (
     <BrowserRouter>
       <CarritoProvider>
         <NavBar />
+        <ToastContainer />
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:cid" element={<ItemListContainer />} />

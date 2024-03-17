@@ -1,17 +1,25 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import { useCounter } from "../hooks/useCounter"
-import { useCarritoContext } from "../context/CartContext"
+import { Link } from "react-router-dom";
+import { useCounter } from "../hooks/useCounter";
+import { useCarritoContext } from "../context/CartContext";
+import { toast } from "react-toastify";
 
 export const ItemDetail = ({ item }) => {
-  const { addItem } = useCarritoContext()
-  const { count, increment, decrement, reset } = useCounter(1, item.stock, 1)
+  const { addItem } = useCarritoContext();
+  const { count, increment, decrement, reset } = useCounter(1, item.stock, 1);
 
   const handleAddToCart = () => {
-    addItem(item, count)
-    console.log("Producto agregado al carrito")
-    console.log("Current Count:", count)
-  }
+    addItem(item, count);
+    toast.success(`Producto agregado al carrito correctamente`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark"
+    });
+  };
 
   return (
     <div className="bg-white p-8 rounded-lg max-w-md">
@@ -23,7 +31,7 @@ export const ItemDetail = ({ item }) => {
 
       <img
         className="w-full h-64 object-cover mb-6"
-        src={`../img/${item.img}`}
+        src={`${item.img}`}
         alt={`Imagen de ${item.title}`}
       />
       <div className="text-center">
@@ -74,5 +82,8 @@ export const ItemDetail = ({ item }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+
+export default ItemDetail;
