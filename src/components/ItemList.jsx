@@ -1,5 +1,5 @@
-import { Item } from "./Item"
-import { ItemCart } from "./ItemCart"
+import { Item } from "./Item.jsx"
+import { ItemCart } from "./ItemCart.jsx"
 
 export const ItemList = ({ products, plantilla }) => {
     return (

@@ -1,7 +1,7 @@
 
 import React from 'react';
-import CarWidget from './CarWidget';
-import Categories from './Categories'
+import CarWidget from './CarWidget.jsx';
+import Categories from './Categories.jsx'
 import { Flex, Spacer } from '@chakra-ui/react';
 
 const NavBar = () => {

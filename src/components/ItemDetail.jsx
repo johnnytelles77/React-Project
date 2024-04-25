@@ -1,6 +1,7 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import { useCounter } from "../hooks/useCounter";
-import { useCarritoContext } from "../context/CartContext";
+import { useCounter } from "../hooks/useCounter.jsx";
+import { useCarritoContext } from "../context/CartContext.jsx";
 import { toast } from "react-toastify";
 
 export const ItemDetail = ({ item }) => {
@@ -8,17 +9,31 @@ export const ItemDetail = ({ item }) => {
   const { count, increment, decrement, reset } = useCounter(1, item.stock, 1);
 
   const handleAddToCart = () => {
-    addItem(item, count);
-    toast.success(`Producto agregado al carrito correctamente`, {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark"
-    });
+    try {
+      addItem(item, count);
+      toast.success(`Producto agregado al carrito correctamente`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark"
+      });
+    } catch (error) {
+      console.log("Error al agregar producto al carrito:", error);
+      toast.error(`Error al agregar producto al carrito: ${error}`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark"
+      });
+    }
   };
 
   return (
@@ -84,6 +99,5 @@ export const ItemDetail = ({ item }) => {
     </div>
   );
 };
-
 
 export default ItemDetail;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { useCarritoContext } from "../context/CartContext";
+import { useCarritoContext } from "../context/CartContext.jsx";
 import { Link } from "react-router-dom"
 
 const CartWidget = () => {

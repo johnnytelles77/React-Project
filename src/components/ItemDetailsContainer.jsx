@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProduct } from "../firebase/firebase.js";
-import { ItemDetail } from "./ItemDetail";
-
+import { ItemDetail } from "./ItemDetail.jsx";
 
 
 export const ItemDetailsContainer = () => {
@@ -27,3 +26,4 @@ export const ItemDetailsContainer = () => {
     </div>
   );
 };
+

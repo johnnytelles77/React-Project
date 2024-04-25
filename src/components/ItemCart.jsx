@@ -1,4 +1,4 @@
-import { useCarritoContext } from "../context/CartContext";
+import { useCarritoContext } from "../context/CartContext.jsx";
 import { useCounter } from "../hooks/useCounter.jsx";
 
 export const ItemCart = ({ product }) => {

@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom"
-
+import { Link } from "react-router-dom";
 
 export const Item = ({ product }) => {
   return (
@@ -13,18 +12,18 @@ export const Item = ({ product }) => {
         <div className="flex justify-between items-center">
           <span className="text-xl font-bold">${product.price}</span>
           <div className="flex items-center">
-            <span className="mr-1 text-yellow-500">{getStars(product.rating)}</span>
             <span className="text-gray-700">({product.numReviews} reviews)</span>
           </div>
         </div>
         <button className="bg-cyan-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none">
-    <Link to={`/product/${product.id}`}>
-          Agregar al Carrito
-    </Link>
+          <Link to={`/product/${product.id}`}>
+            Agregar al Carrito
+          </Link>
         </button>
       </div>
   );
 };
+
 
 
 

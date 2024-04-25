@@ -124,7 +124,8 @@ export const getProducts = async () => {
   }
 }
 
-getProducts()
+
+
 
 
 
@@ -133,16 +134,20 @@ getProducts()
   const producto = await getDoc(doc(bdd, "productos", id));
   const item = { ...producto.data(), id: producto.id };
   return item;
-}; */
+};
+
+getProduct("54wBm1lbGUzbgYbO95xv"); */
 
 
-export const getProduct = async (id) => {
+
+
+/* export const getProduct = async (id) => {
   try {
     const productoRef = doc(bdd, "productos", id);
-    const productoSnap = await getDoc(productoRef);
+    const producto = await getDoc(productoRef);
     
-    if (productoSnap.exists()) {
-      const item = { ...productoSnap.data(), id: productoSnap.id };
+    if (producto.exists()) { // Corregir aquí
+      const item = { ...producto.data(), id: producto.id };
       return item;
     } else {
       console.log("No se encontró el producto con el ID proporcionado.");
@@ -152,7 +157,32 @@ export const getProduct = async (id) => {
     console.error("Error al obtener el producto:", error);
     return null;
   }
+}; */
+
+
+
+//Consultar Producto
+export const getProduct = async (id) => {
+  console.log("Consultando producto con ID:", id); // Agregar este console log
+
+  try {
+    const producto = await getDoc(doc(bdd, "productos", id));
+    console.log("Producto obtenido:", producto.data()); // Agregar este console log
+    
+    const item = { ...producto.data(), id: producto.id };
+    console.log("Item construido:", item); // Agregar este console log
+    
+    return item;
+  } catch (error) {
+    console.error("Error al obtener el producto:", error);
+    return null;
+  }
 };
+
+
+
+
+
 
 
 
